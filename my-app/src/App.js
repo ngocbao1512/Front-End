@@ -3,6 +3,11 @@ import './App.css';
 import {isLabelWithInternallyDisabledControl} from "@testing-library/user-event/dist/utils";
 import Bosuutap from './components/test'
 import Clock from './components/Clock'
+import Form from './components/Form'
+import LoginButton from './components/LoginButton'
+import UserGreeting from './components/UserGreeting'
+import GuestGreeting from './components/GuestGreeting'
+import LogginControll from './components/LogginControll'
 
 function App() {
     const name  = 'ngoc bao';
@@ -24,14 +29,16 @@ function App() {
             >
             </Bosuutap>
             <Clock/>
+            <Form/>
+            <LoginButton/>
+            <LogginControll/>
+            {Greeting(checkLogin)}
         </div>
         ;
-
 
     const response = "ssss";
     const title = response.potentiallyMalicxiousInput;
     const element_3 = <h1>{title}</h1>;
-
 
     const element_4 = (
         <div>
@@ -44,6 +51,17 @@ function App() {
     return Bosuutaps;
 }
 
+const checkLogin = {
+    isLoggedIn : true,
+}
+
+function Greeting(props) {
+    const isLoggerIn = props.isLoggedIn;
+    if (isLoggerIn) {
+        return <UserGreeting />
+    }
+    return <GuestGreeting />
+}
 
 const props = {
     name : "ngocbao1512x    ",
@@ -98,6 +116,23 @@ const user = {
 
 function sum(a,b) {
     return a + b;
+}
+
+function loginButton(props) {
+    return (
+        <button onClick={props.onClick}>
+            Login
+        </button>
+    );
+}
+
+
+function logoutButton(props) {
+    return (
+        <button onClick={props.onClick}>
+            logout
+        </button>
+    );
 }
 
 

@@ -35,6 +35,5 @@ const button = <button onclick="activelasers()">
                    active lasers
                 </button>
 
-const form = <form action=""></form>
 
 export default Clock;
