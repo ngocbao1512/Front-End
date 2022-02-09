@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+<h1>
+    Add react js
+    <div id="root"></div>
+
+
+    <script>
+        //DOM
+        let h1Dom = document.createElement('h1');
+        h1Dom.title = "heldlo";
+        h1Dom.className = "testClass";
+        h1Dom.innerText = 'hello world';
+
+        document.body.appendChild(h1Dom);
+        //REACT
+        const h1React = React.createElement('h1',{
+            title : 'Hello react',
+            className : 'reactClass',
+
+        }, 'hello guy!');
+
+        console.warn(h1React)
+
+        // bai 2 
+
+        //DOM 
+
+        const ulDom = document.createElement('ul');
+        const li1Dom = document.createElement('li');
+        const li2Dom = document.createElement('li');
+        li1Dom.innerText = 'Javarscript';
+        li2Dom.innerText = 'ReactJs';
+        ulDom.appendChild(li1Dom);
+        ulDom.appendChild(li2Dom)
+        document.body.appendChild(ulDom);
+
+        // React
+        const ulReact = React.createElement(
+            'ul',
+            {},
+             React.createElement('li',{},"Javascript"),
+             React.createElement('li',{},'ReactJs')
+             ); 
+
+        console.dir(ulReact)
+
+        let root = document.getElementById('root')
+        ReactDOM.render(ulReact,root)
+    </script>
+
+</h1>
+</body>
+</html>
