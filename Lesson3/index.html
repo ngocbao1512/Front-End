@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lesson 3</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+    const Form = {
+        Input() {
+            return <input type="text" />
+        },
+        CheckBox() {
+            return <input type="checkbox" />
+        }
+    }
+
+    function Button(props) {
+
+        return <button onClick={props.onClick}>{props.title}</button>
+    }
+
+    function App() {
+        return (
+            <div id="wrapper">
+                <Button 
+                    title="Click me!"
+                    onClick={() => console.log(Math.random())}
+                />
+            </div>
+        )
+    }
+
+    function randomNumber() {
+        console.log(Math.random());
+    }
+
+    ReactDOM.render(<App />, document.getElementById('root'))
+    
+</script>
+</body>
+</html>
