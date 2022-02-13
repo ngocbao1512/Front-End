@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import Content from './components/content'
+import { useEffect } from 'react'
+
+
+const gifts = [
+  'CPU I9',
+  'RAM 32 GB RGB',
+  'RGB Keyboard'
+]
+
+const courses = [
+  {
+    id : 1,
+    name : "php"
+  },
+  {
+    id : 2,
+    name : "Javascript"
+  },
+  {
+    id : 3, 
+    name : "ReactJs"
+  }
+]
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+  const [show, setShow] = useState(false)
+ return (
+   <div style={{ padding: 32 }}>
+     <button onClick={() => setShow(!show)}>show</button>
+     {show && <Content />}
+   </div>
+ )
 }
 
 export default App;

@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react'
 import {isLabelWithInternallyDisabledControl} from "@testing-library/user-event/dist/utils";
 import Bosuutap from './components/test'
 import Clock from './components/Clock'
@@ -8,6 +9,7 @@ import LoginButton from './components/LoginButton'
 import UserGreeting from './components/UserGreeting'
 import GuestGreeting from './components/GuestGreeting'
 import LogginControll from './components/LogginControll'
+import Content from './components/content'
 
 function App() {
     const name  = 'ngoc bao';
@@ -48,7 +50,13 @@ function App() {
     );
     setInterval(element_4, 1000);
 
-    return Bosuutaps;
+    const [show, setShow] = useState(false)
+    return (
+      <div style={{ padding: 32 }}>
+        <button onClick={() => setShow(!show)}>show</button>
+        {show && <Content />}
+      </div>
+    )
 }
 
 const checkLogin = {
@@ -134,6 +142,9 @@ function logoutButton(props) {
         </button>
     );
 }
+
+
+
 
 
 export default App;
