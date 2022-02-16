@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a0a4678-5efd-44da-96bf-ef6c18c74e1c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Lesson5/state.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson5/state.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../my-app/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +39,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../WORKSPACE/ReactJs-Projects" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -58,6 +56,8 @@
       <updated>1644676855861</updated>
       <workItem from="1644676858465" duration="30000" />
       <workItem from="1644723991261" duration="1953000" />
+      <workItem from="1644998934493" duration="10000" />
+      <workItem from="1645013363334" duration="21000" />
     </task>
     <servers />
   </component>
